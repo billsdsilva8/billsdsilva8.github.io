@@ -1,46 +1,174 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Portfólio - Bill Silva</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio - Bill Silva</title>
 
-    <style>
-        body{
-            background:#0f172a;
-            color:white;
-            font-family:Arial;
-            text-align:center;
-            padding:50px;
-        }
+  <style>
+    :root{
+      --bg:#0f172a;
+      --card:#1e293b;
+      --text:#e2e8f0;
+      --muted:#94a3b8;
+      --accent:#38bdf8;
+      --whatsapp:#25D366;
+    }
 
-        h1{
-            color:#38bdf8;
-        }
+    *{box-sizing:border-box;}
 
-        .card{
-            background:#1e293b;
-            padding:20px;
-            margin:20px auto;
-            border-radius:10px;
-            width:300px;
-        }
-    </style>
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:Arial, Helvetica, sans-serif;
+      text-align:center;
+      padding:40px 20px;
+    }
+
+    .container{
+      max-width:900px;
+      margin:0 auto;
+    }
+
+    h1{
+      color:var(--accent);
+      margin-bottom:8px;
+      font-size:2.2rem;
+    }
+
+    .subtitle{
+      color:var(--muted);
+      margin-bottom:32px;
+    }
+
+    .card{
+      background:var(--card);
+      padding:24px;
+      margin:20px auto;
+      border-radius:14px;
+      max-width:700px;
+      text-align:left;
+      box-shadow:0 6px 20px rgba(0,0,0,.25);
+    }
+
+    h2{
+      margin-top:0;
+      color:#bae6fd;
+    }
+
+    .project{
+      margin:12px 0;
+      line-height:1.5;
+    }
+
+    a{
+      color:var(--accent);
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    a:hover{
+      text-decoration:underline;
+    }
+
+    .btn-whatsapp{
+      display:inline-block;
+      margin-top:10px;
+      background:var(--whatsapp);
+      color:#062b14;
+      padding:10px 14px;
+      border-radius:10px;
+      font-weight:bold;
+      text-decoration:none;
+    }
+
+    .btn-whatsapp:hover{
+      filter:brightness(1.08);
+      text-decoration:none;
+    }
+
+    /* Botão flutuante */
+    .whatsapp-float{
+      position:fixed;
+      right:20px;
+      bottom:20px;
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      background:var(--whatsapp);
+      color:#062b14;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:30px;
+      text-decoration:none;
+      box-shadow:0 8px 18px rgba(0,0,0,.35);
+      z-index:999;
+      transition:transform .2s ease, filter .2s ease;
+    }
+
+    .whatsapp-float:hover{
+      transform:scale(1.08);
+      filter:brightness(1.05);
+      text-decoration:none;
+    }
+
+    footer{
+      margin-top:28px;
+      color:var(--muted);
+      font-size:.9rem;
+    }
+  </style>
 </head>
 
 <body>
-
+  <div class="container">
     <h1>Bill Silva</h1>
-
-    <p>
-         
-    </p>
+    <p class="subtitle">Portfólio de projetos em dados, análise e visualização</p>
 
     <div class="card">
-        <h2>Projetos</h2>
+      <h2>Projetos</h2>
 
-        <p>✔ Dashboard de Valor Bruto da Produção Agropecuária do Paraná (VBP)</p>
-        <p></p>
+      <p class="project">
+        ✔ <strong>Dashboard de Valor Bruto da Produção Agropecuária do Paraná (VBP)</strong><br/>
+        Painel para acompanhamento e análise de indicadores do VBP por município e cultura.
+      </p>
+
+      <p class="project">
+        🔗 <a href="#" target="_blank" rel="noopener noreferrer">Ver projeto</a>
+      </p>
     </div>
 
+    <div class="card">
+      <h2>Contato</h2>
+      <p class="project">📧 seuemail@exemplo.com</p>
+      <p class="project">💼 <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+      <p class="project">🐙 <a href="https://github.com/billsdsilva8" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+
+      <a
+        class="btn-whatsapp"
+        href="https://wa.me/5511999999999?text=Ol%C3%A1%20Bill%2C%20vim%20pelo%20seu%20portf%C3%B3lio!"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        💬 Falar no WhatsApp
+      </a>
+    </div>
+
+    <footer>© 2026 Bill Silva</footer>
+  </div>
+
+  <!-- Botão flutuante do WhatsApp -->
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/5511999999999?text=Ol%C3%A1%20Bill%2C%20vim%20pelo%20seu%20portf%C3%B3lio!"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar no WhatsApp"
+    title="Falar no WhatsApp"
+  >
+    💬
+  </a>
 </body>
 </html>
